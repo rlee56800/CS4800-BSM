@@ -1,7 +1,23 @@
 public class DiscountScheme {
-    public int priceDiscount;
+    public double priceDiscount;
 
-    public int getPriceDiscount() {
+    public DiscountScheme(String type) {
+        switch(type) {
+            case "student":
+                // students gte 10% discount
+                priceDiscount = 0.10;
+                break;
+            case "professor":
+                // professors get 15% discount
+                priceDiscount = 0.15;
+                break;
+            default:
+                // else 0% discount
+                priceDiscount = 0.0;
+        }
+    }
+
+    public double getPriceDiscount() {
         return priceDiscount;
     }
 }
