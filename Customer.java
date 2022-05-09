@@ -20,7 +20,44 @@ public class Customer {
     }
 
     // getters
+    public int getBroncoID() {
+        return broncoID;
+    }
+
+    public String getFirstName() {
+        return firstName;
+    }
+
+    public String getLastName() {
+        return lastName;
+    }
+
+    public String getDob() {
+        return dob;
+    }
+
+    public int getPhoneNumber() {
+        return phoneNumber;
+    }
+
     public double getDiscountScheme() {
         return discountScheme.getPriceDiscount();
+    }
+
+    // setters
+    public void setFirstName(String name) {
+        firstName = name;
+    }
+
+    public void setLastName(String name) {
+        lastName = name;
+    }
+
+    public void setDob(String dob) {
+        this.dob = dob;
+    }
+
+    public void setPhoneNumber(int phoneNumber) {
+        this.phoneNumber = phoneNumber;
     }
 }

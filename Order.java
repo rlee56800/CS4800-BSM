@@ -34,4 +34,16 @@ public class Order {
     public Customer getCustomer() {
         return customer;
     }
+
+    public String getDate() {
+        return date;
+    }
+
+    public String getTime() {
+        return time;
+    }
+
+    public ArrayList<Product> getProducts() {
+        return products;
+    }
 }

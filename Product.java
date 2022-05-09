@@ -23,6 +23,10 @@ public class Product {
     public int getProductID() {
         return productID;
     }
+    
+    public String getProductName() {
+        return name;
+    }
 
     public int getQuantity() {
         return quantity;

@@ -33,4 +33,8 @@ public class Receipt {
     public String getPeriod() {
         return period;
     }
+
+    public Customer getCustomer() {
+        return customer;
+    }
 }
