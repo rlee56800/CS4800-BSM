@@ -1,27 +1,28 @@
 import java.util.ArrayList;
 
 public class Report {
-    private ArrayList<Receipt> receipts;
+    private ArrayList<Order> orders;
 
-    public Report(ArrayList<Receipt> receipts) {
-        this.receipts = receipts;
+    public Report(ArrayList<Order> orders) {
+        this.orders = orders;
     }
 
     public double getTotalEarnings() {
         double total = 0;
-        for(Receipt r : receipts) {
-            total += r.getTotal();
+        for(Order o : orders) {
+            total += o.calculateTotal();
         }
 
         return total;
     }
 
+    // something has to sort period
     public double getTotalEarnings(String period) {
         double total = 0;
 
-        for(Receipt r : receipts) {
-            if(r.getPeriod().equals(period)) { // heck your efficiency
-                total += r.getTotal();
+        for(Order o : orders) {
+            if(o.getDate().equals(period)) { // heck your efficiency
+                total += o.calculateTotal();
             }
         }
 
