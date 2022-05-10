@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+// Order prints the recript and is used in the Report
 
 public class Order {
     private String date;
