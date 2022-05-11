@@ -1,3 +1,7 @@
+import javax.persistence.*;
+
+@Entity
+@Table(name = "customer")
 public class Customer {
     private int broncoID; // THIS IS IN THE UOD
     private String firstName;
