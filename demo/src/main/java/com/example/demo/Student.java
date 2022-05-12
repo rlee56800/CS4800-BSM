@@ -1,4 +1,4 @@
-package demo.src.main.java.com.example.demo;
+package com.example.demo;
 
 public class Student extends Customer {
     private String enterDate;
