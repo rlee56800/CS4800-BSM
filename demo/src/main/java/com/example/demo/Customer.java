@@ -1,4 +1,6 @@
+package demo.src.main.java.com.example.demo;
 import javax.persistence.*;
+
 
 @Entity
 @Table(name = "customer")

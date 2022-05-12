@@ -1,3 +1,5 @@
+package demo.src.main.java.com.example.demo;
+
 public class HistoricalPrice {
     private String date;
     private double price;

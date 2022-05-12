@@ -1,3 +1,5 @@
+package demo.src.main.java.com.example.demo;
+
 public class Student extends Customer {
     private String enterDate;
     private String gradDate;

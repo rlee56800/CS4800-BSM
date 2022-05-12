@@ -1,3 +1,5 @@
+package demo.src.main.java.com.example.demo;
+
 public class Professor extends Customer {
     private String department;
     private String office;

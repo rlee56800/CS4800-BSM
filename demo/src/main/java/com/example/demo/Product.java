@@ -1,3 +1,5 @@
+package demo.src.main.java.com.example.demo;
+
 import java.util.ArrayList;
 
 public class Product {
