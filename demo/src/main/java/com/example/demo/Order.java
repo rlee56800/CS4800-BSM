@@ -14,6 +14,8 @@ public class Order {
     private String datetime;
     @Column(name = "customer")
     private Customer customer;
+    @Column(name = "total_price")
+    private Customer totalPrice;
     private ArrayList<Product> products;
 
     public Order(String datetime, Customer customer) {
