@@ -22,31 +22,33 @@ public class Order {
     @Column(name = "customer")
     private Customer customer;
     @Column(name = "total_price")
-    private Customer totalPrice;
-    private ArrayList<Product> products;
+    private double totalPrice;
+    private ArrayList<OrderQuant> items;
 
     public Order(String datetime, Customer customer) {
         this.datetime = datetime;
         this.customer = customer;
     }
 
-    public void addItem(Product item, int quantity) {
-
+    public void addItem(Product item, int quant) {
+        OrderQuant adding = new OrderQuant(item, quant);
+        items.add(adding);
+        totalPrice += (1 - customer.getDiscountScheme()) * adding.getSum();
     }
 
-    public double calculateTotal() {
-        double total = 0;
+    // public double calculateTotal() {
+    //     double total = 0;
 
-        // for(Product prod : products) {
-        //     // sum of all items in cart
-        //     total += prod.getQuantity() * prod.getPrice();
-        // }
+    //     for(OrderQuant item : items) {
+    //         // sum of all items in cart
+    //         total += item.getSum();
+    //     }
 
-        // apply discount
-        total *= (1 - customer.getDiscountScheme());
+    //     //apply discount
+    //     total *= (1 - customer.getDiscountScheme());
 
-        return total;
-    }
+    //     return total;
+    // }
 
     // getters
     public Customer getCustomer() {
@@ -57,7 +59,11 @@ public class Order {
         return datetime;
     }
 
-    public ArrayList<Product> getProducts() {
-        return products;
+    public ArrayList<OrderQuant> getItems() {
+        return items;
+    }
+
+    public double getTotalPrice() {
+        return totalPrice;
     }
 }

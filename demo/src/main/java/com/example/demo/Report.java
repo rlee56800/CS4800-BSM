@@ -12,7 +12,7 @@ public class Report {
     public double getTotalEarnings() {
         double total = 0;
         for(Order o : orders) {
-            total += o.calculateTotal();
+            total += o.getTotalPrice();
         }
 
         return total;
