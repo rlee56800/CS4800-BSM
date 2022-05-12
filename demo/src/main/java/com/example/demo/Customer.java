@@ -5,6 +5,7 @@ import javax.persistence.*;
 @Entity
 @Table(name = "customer")
 public class Customer {
+    @Id
     @Column(name = "broncoID")
     private int broncoID; // THIS IS IN THE UOD
     @Column(name = "first_name")

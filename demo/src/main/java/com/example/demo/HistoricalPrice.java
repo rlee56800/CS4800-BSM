@@ -2,12 +2,17 @@ package com.example.demo;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
 @Table(name="historical_price")
 public class HistoricalPrice {
+    @Id
     @Column(name = "hprice_id") // does it need this
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int hprice_id;
     @Column(name = "date")
     private String date;
