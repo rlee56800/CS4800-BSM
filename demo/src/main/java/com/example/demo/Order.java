@@ -3,15 +3,21 @@ package com.example.demo;
 import java.util.ArrayList;
 // Order prints the recript and is used in the Report
 
-public class Order {
-    private String date;
-    private String time;
-    private ArrayList<Product> products;
-    private Customer customer;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Table;
 
-    public Order(String date, String time, Customer customer) {
-        this.date = date;
-        this.time = time;
+@Entity
+@Table(name="orders")
+public class Order {
+    @Column(name = "datetime")
+    private String datetime;
+    @Column(name = "customer")
+    private Customer customer;
+    private ArrayList<Product> products;
+
+    public Order(String datetime, Customer customer) {
+        this.datetime = datetime;
         this.customer = customer;
     }
 
@@ -22,10 +28,10 @@ public class Order {
     public double calculateTotal() {
         double total = 0;
 
-        for(Product prod : products) {
-            // sum of all items in cart
-            total += prod.getQuantity() * prod.getPrice();
-        }
+        // for(Product prod : products) {
+        //     // sum of all items in cart
+        //     total += prod.getQuantity() * prod.getPrice();
+        // }
 
         // apply discount
         total *= (1 - customer.getDiscountScheme());
@@ -38,12 +44,8 @@ public class Order {
         return customer;
     }
 
-    public String getDate() {
-        return date;
-    }
-
-    public String getTime() {
-        return time;
+    public String getDatetime() {
+        return datetime;
     }
 
     public ArrayList<Product> getProducts() {

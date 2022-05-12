@@ -18,16 +18,16 @@ public class Report {
         return total;
     }
 
-    // something has to sort period
-    public double getTotalEarnings(String period) {
-        double total = 0;
+    // // something has to sort period
+    // public double getTotalEarnings(String period) {
+    //     double total = 0;
 
-        for(Order o : orders) {
-            if(o.getDate().equals(period)) { // heck your efficiency
-                total += o.calculateTotal();
-            }
-        }
+    //     for(Order o : orders) {
+    //         if(o.getDate().equals(period)) { // heck your efficiency
+    //             total += o.calculateTotal();
+    //         }
+    //     }
 
-        return total;
-    }
+    //     return total;
+    // }
 }
