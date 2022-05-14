@@ -31,6 +31,13 @@ public class Order {
         this.customer = customer;
     }
 
+    public Order(String datetime, Customer customer, ArrayList<OrderQuant> items, double tp) {
+        this.datetime = datetime;
+        this.customer = customer;
+        this.items = items;
+        this.totalPrice = tp;
+    }
+
     public void addItem(Product item, int quant) {
         OrderQuant adding = new OrderQuant(item, quant);
         items.add(adding);
