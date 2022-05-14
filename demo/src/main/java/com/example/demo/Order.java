@@ -44,21 +44,11 @@ public class Order {
         totalPrice += (1 - customer.getDiscountScheme()) * adding.getSum();
     }
 
-    // public double calculateTotal() {
-    //     double total = 0;
-
-    //     for(OrderQuant item : items) {
-    //         // sum of all items in cart
-    //         total += item.getSum();
-    //     }
-
-    //     //apply discount
-    //     total *= (1 - customer.getDiscountScheme());
-
-    //     return total;
-    // }
-
     // getters
+    public Customer getOrderID() {
+        return customer;
+    }
+
     public Customer getCustomer() {
         return customer;
     }
