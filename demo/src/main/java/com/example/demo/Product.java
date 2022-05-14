@@ -20,8 +20,7 @@ public class Product {
     @Column(name = "name")
     private String name;
     
-    public Product(int productID, double price, String name) {
-        this.productID = productID;
+    public Product(double price, String name) {
         this.price = price;
         this.name = name;
     }
@@ -40,9 +39,10 @@ public class Product {
     }
 
     // setters
-
-    public void setPrice(String date, double newPrice) {
-        //historicalPrice.add(new HistoricalPrice(date, price));
+    public void setPrice(double newPrice) {
         price = newPrice;
+    }
+    public void setName(String name) {
+        this.name = name;
     }
 }

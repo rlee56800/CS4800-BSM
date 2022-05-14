@@ -1,5 +1,7 @@
 package com.example.demo;
 
+import java.util.Date;
+
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
@@ -8,9 +10,9 @@ public class HistoricalPricedb {
      SessionFactory sessionFactory = HibernateUtil.getSessionFactory();
      Session session;
     
-     public void createHistoricalPrice(String date, double price, Product product) {
+     public void createHistoricalPrice(double price, Product product) {
         start();
-        HistoricalPrice newHistoricalPrice = new HistoricalPrice(date, price, product);
+        HistoricalPrice newHistoricalPrice = new HistoricalPrice(new Date().toString(), price, product);
         session.save(newHistoricalPrice);
         session.getTransaction().commit();
         close();
