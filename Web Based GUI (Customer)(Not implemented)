@@ -1,0 +1,108 @@
+/*
+
+import java.util.ArrayList;
+
+
+public class Customer {
+	protected int broncoID;
+	protected String firstName;
+	protected String lastName;
+	protected String emailAddress;
+	protected String address;
+	protected boolean student;
+	//private CustomerDB dbc = new CustomerDB();
+
+
+	//constructor
+	public Customer()
+	{
+		broncoID=0;
+		firstName = "";
+		lastName = "";
+		emailAddress = "";
+		address = "";
+	}
+		
+	//getters
+	public int getBroncoID()
+	{
+		return broncoID;
+	}
+		
+	public String getFirstName()
+	{
+		return firstName;
+	}
+	
+	public String getLastName()
+	{
+		return lastName;
+	}
+	
+	public String getFullName()
+	{
+		return firstName + " " + lastName;
+	}
+	public String getEmailAddress()
+	{
+		return emailAddress;
+	}
+	
+	public String getAddress()
+	{
+		return address;
+	}
+	
+	public boolean getStudent()
+	{
+		return student;
+	}
+	
+  
+
+		
+	//setters
+	public void setBroncoID(int id)
+	{
+		broncoID = id;
+	}
+	
+	public void setFirstName(String name)
+	{
+		firstName = name;
+	}
+	
+	public void setLastName(String name)
+	{
+		lastName = name;
+	}
+	
+	public void setEmailAddress(String address)
+	{
+		emailAddress = address;
+	}
+	
+	public void setStudent(boolean s)
+	{
+		student = s;
+	}
+
+	public void setAddress(String ad) 
+    {
+		address = ad;	
+	}
+
+
+}
+	
+    /*
+	
+
+
+	//connection
+	public void getInfoFromDBC() throws Exception
+	{
+		dbc.selectCustomer(this);
+	}
+	
+*/
