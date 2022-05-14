@@ -33,7 +33,6 @@ public class Address {
         this.state = state;
     }
 
-    // singleton :(
     public Address getAddress() {
         return new Address(street, number, zipcode, city, state);
     }
