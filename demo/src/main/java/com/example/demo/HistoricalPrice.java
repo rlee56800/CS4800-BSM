@@ -49,23 +49,15 @@ public class HistoricalPrice {
     }
     
     // setters
-    public void setFirstName(String name) {
-        firstName = name;
+    public void setDate(String date) {
+        this.date = date;
     }
 
-    public void setLastName(String name) {
-        lastName = name;
+    public void setPrice(double price) {
+        this.price = price;
     }
 
-    public void setAddress(Address address) {
-        this.address = address;
-    }
-
-    public void setDob(String dob) {
-        this.dob = dob;
-    }
-
-    public void setPhoneNumber(int phoneNumber) {
-        this.phoneNumber = phoneNumber;
+    public void setProduct(Product product) {
+        this.product = product;
     }
 }

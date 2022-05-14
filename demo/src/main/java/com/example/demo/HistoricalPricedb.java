@@ -23,19 +23,12 @@ public class HistoricalPricedb {
      }
 
      // something else filters information; same info if not changed, new infor for things that DO change
-     public void updateHistoricalPrice(String date, double price, Product product) {
+     public void updateHistoricalPrice(int hp_id, String date, double price, Product product) {
         start();
-        HistoricalPrice historicalPrice = session.get(HistoricalPrice.class, broncoID);
-      // HERE: check HistoricalPrice class and fix
-        //   HistoricalPrice.setFirstName(first);
-      //   HistoricalPrice.setLastName(last);
-      //   HistoricalPrice.setAddress(address);
-      //   HistoricalPrice.setDob(dob);
-      //   HistoricalPrice.setPhoneNumber(phoneNum);
-      //   HistoricalPrice.setEnterDate(enterDate);
-      //   HistoricalPrice.setGradDate(gradDate);
-      //   HistoricalPrice.setMajor(major);
-      //   HistoricalPrice.setMinor(minor);
+        HistoricalPrice historicalPrice = session.get(HistoricalPrice.class, hp_id);
+        historicalPrice.setDate(date);
+        historicalPrice.setPrice(price);
+        historicalPrice.setProduct(product);
         session.update(historicalPrice);
         session.getTransaction().commit();
         close();
