@@ -12,23 +12,25 @@ public class Customer {
     private String firstName;
     @Column(name = "last_name")
     private String lastName;
+    private Address address;
     @Column(name = "dob")
     private String dob;
     @Column(name = "phone_number")
     private int phoneNumber;
     private DiscountScheme discountScheme;
 
-    public Customer(int broncoID, String firstName, String lastName, String dob, int phoneNumber, String type) {
+    public Customer(int broncoID, String firstName, String lastName, Address address, String dob, int phoneNumber, String type) {
         this.broncoID = broncoID;
         this.firstName = firstName;
         this.lastName = lastName;
+        this.address = address;
         this.dob = dob;
         this.phoneNumber = phoneNumber;
         discountScheme = new DiscountScheme(type);
     }
 
-    public Customer(int broncoID, String firstName, String lastName, String dob, int phoneNumber) {
-        this(broncoID, firstName, lastName, dob, phoneNumber, "none");
+    public Customer(int broncoID, String firstName, String lastName, Address address, String dob, int phoneNumber) {
+        this(broncoID, firstName, lastName, address, dob, phoneNumber, "none");
     }
 
     // getters
@@ -48,6 +50,10 @@ public class Customer {
         return dob;
     }
 
+    public Address getAddress() {
+        return address;
+    }
+
     public int getPhoneNumber() {
         return phoneNumber;
     }
@@ -63,6 +69,10 @@ public class Customer {
 
     public void setLastName(String name) {
         lastName = name;
+    }
+
+    public void setAddress(Address address) {
+        this.address = address;
     }
 
     public void setDob(String dob) {
